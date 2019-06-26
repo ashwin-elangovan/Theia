@@ -48,9 +48,8 @@ class Theia
       method :convert_screenshot, convert_function
     end
 
-    def initialize(url, options = {})
+    def initialize(url)
       @url = url
-      @options = options
     end
 
     #
@@ -77,7 +76,7 @@ class Theia
     #
     # Request URL with provided options and create PNG
     #
-    def to_png(path, options = nil)
+    def to_png(path, options = {})
       return raise Exceptions::InvalidFileFormatError unless valid_output_format?(path, 'png')
       screenshot(path, 'png', options)
     end
@@ -85,7 +84,7 @@ class Theia
     #
     # Request URL with provided options and create JPEG
     #
-    def to_jpeg(path, options = nil)
+    def to_jpeg(path, options = {})
       return raise Exceptions::InvalidFileFormatError unless valid_output_format?(path, 'jpeg')
       screenshot(path, 'jpeg', options)
     end
