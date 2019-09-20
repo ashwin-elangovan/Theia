@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
+require 'theia/version'
+
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name = 'theia'
-  s.version = '0.0.1'
+  s.version = Theia::VERSION
   s.authors = ['Ashwin Elangovan']
   s.email       = %w[ashelangovan97@gmail.com]
   s.homepage    = 'http://github.com/ash-elangovan/theia'
