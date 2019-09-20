@@ -1,0 +1,25 @@
+{
+  "name": "theia",
+  "version": "0.0.1",
+  "description": "A Ruby gem to create PNGs or JPEGs using Google Puppeteer/Chromium",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ash-elangovan/theia.git"
+  },
+  "keywords": [
+    "PDF",
+    "puppeteer",
+    "chromium"
+  ],
+  "author": "ashelangovan97@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ash-elangovan/theia/issues"
+  },
+  "homepage": "https://github.com/ash-elangovan/theia#readme",
+  "devDependencies": {
+    "puppeteer": "^1.19.0",
+    "sharp": "^0.22.0",
+    "pixematch": "^5.0.2"
+  }
+}
