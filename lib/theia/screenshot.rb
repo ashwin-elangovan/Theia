@@ -66,7 +66,7 @@ class Theia
     def construct_params(path, format, options)
       path ||= DEFAULT_PATH
       params = { path: path }
-      allowed_options = options.permit(:quality, :clip, :omit_background)
+      allowed_options = options.slice(:quality, :clip, :omit_background, :full_page)
       normalized_options = Utils.normalize_object allowed_options
       params.merge!(normalized_options)
       params['type'] = format if format.is_a? ::String
