@@ -9,6 +9,15 @@ class Theia
       @root_path ||= Dir.pwd
     end
 
+    # Replaces the hash without the given keys.
+    #   hash = { a: true, b: false, c: nil}
+    #   hash.except!(:c) # => { a: true, b: false}
+    #   hash # => { a: true, b: false }
+    def self.except!(hash, *keys)
+      keys.each { |key| hash.delete(key) }
+      hash
+    end
+
     #
     # Deep transform the keys in an object (Hash/Array)
     #

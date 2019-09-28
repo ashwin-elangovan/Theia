@@ -57,7 +57,7 @@ class Theia
     #
     def screenshot(path, format, options)
       device = DEVICE_HASH[options[:device]&.to_sym] || DEFAULT_DEVICE
-      custom_params = construct_params(path, format, options.except!(:device))
+      custom_params = construct_params(path, format, Utils.except!(options, :device))
       result = processor.convert_screenshot @url, device, custom_params
       return unless result
       result['data'].pack('C*')
