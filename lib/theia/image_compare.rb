@@ -36,7 +36,7 @@ class Theia
 
     def compare_params options
       return if options.nil?
-      permitted_options = options.permit(:alpha, :aa_color, :include_a_a, :threshold, :diff_color)
+      permitted_options = options.permit(:alpha, :aa_color, :include_a_a, :threshold, :diff_color, :diff_mask)
       Utils.normalize_object permitted_options
     end
 
