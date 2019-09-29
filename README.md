@@ -25,23 +25,57 @@ npm install puppeteer pixelmatch sharp
 
 ## Usage
 
-### Screenshot
+### Screenshot [Google Puppeteer]
 
 ```ruby
-# Theia accepts a valid website URL for initialization.
-theia = Theia::Screenshot.new(<website_url>)
+# Theia Screenshot accepts a valid website URL for initialization.
+theia_screenshot = Theia::Screenshot.new(<website_url>)
 
 # Get a screenshot
-
-png = theia.to_png(<save_location>, options)
-jpeg = theia.to_jpeg(<save_location>, options) 
+png = theia_screenshot.to_png(<save_location>, options)
+jpeg = theia_screenshot.to_jpeg(<save_location>, options) 
 ```
+`<save_location>` must be in the format of `output_file.png` or `output_file.jpg`
+
 #### Options
+
+`options` is an object literal with the following properties:
+
 * `full_page` When true, takes a screenshot of the full scrollable page. Defaults to false, values: `true/false`
-* `device` Devices which will be used to generate screenshot, values: `mobile, iphone, ipad, desktop and their respective landscapes by appending _landscape`
+* `device` Devices which will be used to generate screenshot, values: `mobile, iphone, ipad, desktop` and their respective landscapes by appending `_landscape`
 * `url` Valid website URL, eg: `https://www.google.com`
-* `quality` The quality of the image, between 0-100. Not applicable to png images, values: 0-100
-* `omit_background` Hides default white background and allows capturing screenshots with transparency. Defaults to false.
+* `quality` The quality of the image, between `0-100`. Not applicable to png images, values: 0-100
+* `omit_background` Hides default white background and allows capturing screenshots with transparency. Defaults to false, values: `true/false`
+
+### Image Compare [Pixelmatch]
+
+```ruby
+# Theia ImageCompare accepts a valid website URL for initialization.
+theia_compare = Theia::ImageCompare.new
+
+# Compare 2 pngs
+theia_compare.compare(<file1.png>, <file2.png>, <output.png>, options)
+```
+
+Only PNG compare is supported now. JPEG will be added in the near future.
+
+#### Options
+
+`options` is an object literal with the following properties:
+
+* `threshold` Matching threshold, ranges from `0` to `1`. Smaller values make the comparison more sensitive. `0.1` by default.
+* `include_a_a` If `true`, disables detecting and ignoring anti-aliased pixels. `false` by default.
+* `alpha` Blending factor of unchanged pixels in the diff output. Ranges from `0` for pure white to `1` for original brightness. `0.1` by default.
+* `aa_color` The color of anti-aliased pixels in the diff output in `[R, G, B]` format. `[255, 255, 0]` by default.
+* `diff_color` The color of differing pixels in the diff output in `[R, G, B]` format. `[255, 0, 0]` by default.
+* `diff_mask` Draw the diff over a transparent background (a mask), rather than over the original image. Will not draw anti-aliased pixels (if detected).
+
+Compares two images, writes the output diff and returns the number of mismatched pixels.
+
+
+
+
+
 
 
 
