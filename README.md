@@ -8,7 +8,7 @@ A Ruby gem to
 
 ## Installation
 
-Ruby Dependencies:
+### Ruby Dependencies
 
 Add this line to your application's Gemfile:
 
@@ -16,7 +16,34 @@ Add this line to your application's Gemfile:
 gem 'theia'
 ```
 
-### Google Puppeteer
+### Node dependencies
+
 ```bash
+nvm use 10.16.3
 npm install puppeteer pixelmatch sharp
 ```
+
+## Usage
+
+### Screenshot
+
+```ruby
+# Theia accepts a valid website URL for initialization.
+theia = Theia::Screenshot.new(<website_url>)
+
+# Get a screenshot
+
+png = theia.to_png(<save_location>, options)
+jpeg = theia.to_jpeg(<save_location>, options) 
+```
+#### Options
+* `full_page` When true, takes a screenshot of the full scrollable page. Defaults to false, values: `true/false`
+* `device` Devices which will be used to generate screenshot, values: `mobile, iphone, ipad, desktop and their respective landscapes by appending _landscape`
+* `url` Valid website URL, eg: `https://www.google.com`
+* `quality` The quality of the image, between 0-100. Not applicable to png images, values: 0-100
+* `omit_background` Hides default white background and allows capturing screenshots with transparency. Defaults to false.
+
+
+
+
+
