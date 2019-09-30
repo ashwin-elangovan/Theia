@@ -50,7 +50,6 @@ jpeg = theia_screenshot.to_jpeg(<save_location>, options)
 ### Image Compare [Pixelmatch]
 
 ```ruby
-# Theia ImageCompare accepts a valid website URL for initialization.
 theia_compare = Theia::ImageCompare.new
 
 # Compare 2 pngs
@@ -72,8 +71,21 @@ Only PNG compare is supported now. JPEG will be added in the near future.
 
 Compares two images, writes the output diff and returns the number of mismatched pixels.
 
+#### Image Compress [Sharp]
 
+```ruby
+theia_compress = Theia::ImageCompress.new(<image_type>)
 
+# Compress an image
+theia_compare.compress(<file1>, <output>, options)
+```
+Currently `png` and `jpeg` images are supported.
+
+`options` is an object literal with the following properties:
+
+* `compression_level` zlib compression level, 0-9 (optional, default 9). Only for PNGs
+* `quality` Use the lowest number of colours needed to achieve given quality, requires libvips compiled with support for libimagequant (optional, default 100)
+* `force` Boolean force JPEG/PNG output, otherwise attempt to use input format (optional, default true)
 
 
 
