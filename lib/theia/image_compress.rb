@@ -41,7 +41,7 @@ class Theia
       @type = type
     end
 
-    def compress(input_file, output_file, options = nil)
+    def compress(input_file, output_file, options = {})
       return raise Exceptions::InvalidFileFormatError if Utils.compress_preconditions(@type, input_file, output_file)
       image_processor.send(@type.to_sym, input_file, output_file, options)
     end
