@@ -36,7 +36,7 @@ class Theia
               const devices = require('puppeteer/DeviceDescriptors');
               await page.emulate(devices[device]);
               await page.goto(website_url);
-              await page.screenshot(options);
+              return await page.screenshot(options);
             } finally {
               if (browser) {
                 await browser.close();
