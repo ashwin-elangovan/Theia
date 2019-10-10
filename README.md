@@ -71,7 +71,7 @@ Only PNG compare is supported now. JPEG will be added in the near future.
 
 Compares two images, writes the output diff and returns the number of mismatched pixels.
 
-#### Image Compress [Sharp]
+### Image Compress [Sharp]
 
 ```ruby
 theia_compress = Theia::ImageCompress.new(<image_type>)
