@@ -94,7 +94,7 @@ describe Theia::Utils do
     context 'when key has an acronym in it' do
       let(:object) { { prefer_css_page_size: true } }
 
-      it { is_expected.to eq('preferCSSPageSize' => true) }
+      it { is_expected.to eq('preferCssPageSize' => true) }
     end
 
     context 'with nested Hashes' do
