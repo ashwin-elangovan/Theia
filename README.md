@@ -86,9 +86,11 @@ Currently `png` and `jpeg` images are supported.
 * `compression_level` zlib compression level, 0-9 (optional, default 9). Only for PNGs
 * `quality` Use the lowest number of colours needed to achieve given quality, requires libvips compiled with support for libimagequant (optional, default 100)
 * `force` Boolean force JPEG/PNG output, otherwise attempt to use input format (optional, default true)
-
-
-
+* `adaptive_filtering` Use adaptive row filtering (optional, default false)
+* `palette` Quantise to a palette-based image with alpha transparency (boolean)
+* `colours` Maximum number of palette entries, requires libvips compiled with support for libimagequant (optional, default 256)
+* `progressive` Only for JPEG. Use progressive (interlace) scan (optional, default false)
+* `optimise_coding` Only for JPEG. Optimise Huffman coding tables (optional, default true)
 
 
 
