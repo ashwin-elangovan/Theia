@@ -27,16 +27,16 @@ class Theia
       method :compare_png, compare_image
     end
 
-    def compare(image_1, image_2, output, options = nil)
+    def compare(image_1, image_2, output, options = {})
       return raise Exceptions::InvalidFileFormatError if Utils.invalid_file_format?('png', image_1, image_2)
       image_processor.compare_png(image_1, image_2, output, construct_params(options))
     end
 
     private
 
-    def compare_params options
-      return if options.nil?
-      permitted_options = options.permit(:alpha, :aa_color, :include_a_a, :threshold, :diff_color, :diff_mask)
+    def construct_params options
+      return if options.empty?
+      permitted_options = options.slice(:alpha, :aa_color, :include_a_a, :threshold, :diff_color, :diff_mask)
       Utils.normalize_object permitted_options
     end
 

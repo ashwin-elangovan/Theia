@@ -43,7 +43,13 @@ class Theia
 
     def compress(input_file, output_file, options = {})
       return raise Exceptions::InvalidFileFormatError if Utils.compress_preconditions(@type, input_file, output_file)
-      image_processor.send(@type.to_sym, input_file, output_file, options)
+      image_processor.send(@type.to_sym, input_file, output_file, construct_params(options))
+    end
+
+    def construct_params options
+      return if options.empty?
+      permitted_options = options.slice(:compression_level, :quality, :adaptive_filtering, :palette, :colours, :progressive, :optimise_coding, :force)
+      Utils.normalize_object permitted_options
     end
 
     private
