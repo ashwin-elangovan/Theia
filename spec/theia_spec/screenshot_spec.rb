@@ -20,8 +20,6 @@ describe Theia::Screenshot do
     it { expect(to_png.unpack('C*')).to start_with "\x89PNG\r\n\x1A\n".unpack('C*') }
     it { expect(image.type).to eq 'PNG' }
     it { expect(image.dimensions).to eq [1600, 2560] }
-    # To be added after html support
-    # it { expect(mean_colour_statistics(image)).to eq %w[0 128 0] }
   end
 
   describe '#to_jpeg' do
@@ -34,10 +32,5 @@ describe Theia::Screenshot do
     it { expect(to_jpeg.unpack('C*')).to end_with [0xFF, 0xD9] }
     it { expect(image.type).to eq 'JPEG' }
     it { expect(image.dimensions).to eq [1600, 2560] }
-    # it { expect(mean_colour_statistics(image)).to eq %w[129 0 127] }
-  end
-
-  def mean_colour_statistics(image)
-    %w[red green blue].map { |colour| image.data.dig('channelStatistics', colour, 'mean') }
   end
 end
