@@ -70,7 +70,7 @@ class Theia
     end
 
     def self.unsupported_compression?(type)
-      type != ('png' || 'jpg')
+      !['jpg', 'png'].include? type
     end
 
     def self.invalid_file_format?(type, input, output)

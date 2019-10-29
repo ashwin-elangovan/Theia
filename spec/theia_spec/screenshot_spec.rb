@@ -23,7 +23,7 @@ describe Theia::Screenshot do
   end
 
   describe '#to_jpeg' do
-    subject(:to_jpeg) { theia.to_jpeg("ex.jpeg") }
+    subject(:to_jpeg) { theia.to_jpeg("ex.jpg") }
 
     let(:image) { MiniMagick::Image.read to_jpeg }
 

@@ -25,7 +25,7 @@ class Theia
         <<-FUNCTION
         async (input_file, output_file, options) => {
             const input = sharp(input_file);
-            const new_jpg = input.jpg(options);
+            const new_jpg = input.jpeg(options);
             new_jpg.toFile(output_file, function(err, info) {
               console.log("Error while compressing jpeg image")
             });
