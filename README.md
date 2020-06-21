@@ -2,7 +2,7 @@
 
 A Ruby gem to 
 
-1) Transform website URL into PNGs or JPEGs using [Google Puppeteer](https://github.com/GoogleChrome/puppeteer).
+1) Transform website URL into PNGs or JPEGs using [Puppeteer](https://github.com/GoogleChrome/puppeteer).
 2) Compare two images using Node JS Library [Pixelmatch](https://github.com/mapbox/pixelmatch)
 3) Compress an image using Sharp [Sharp](https://github.com/lovell/sharp)
 
