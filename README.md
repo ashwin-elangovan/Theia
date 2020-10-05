@@ -28,7 +28,7 @@ npm install puppeteer pixelmatch sharp
 ### Screenshot [Google Puppeteer]
 
 ```ruby
-# Theia Screenshot accepts a valid website URL for initialization.
+# Theia screenshot accepts a valid website URL for initialization.
 theia_screenshot = Theia::Screenshot.new(<website_url>)
 
 # Get a screenshot
