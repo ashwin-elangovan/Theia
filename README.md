@@ -92,6 +92,9 @@ Currently `png` and `jpeg` images are supported.
 * `progressive` Only for JPEG. Use progressive (interlace) scan (optional, default false)
 * `optimise_coding` Only for JPEG. Optimise Huffman coding tables (optional, default true)
 
+### Contributions
+Feel free to send suggestions, point out issues, or submit pull requests.
+
 
 
 
