@@ -7,3 +7,6 @@ require 'theia/image_compare'
 require 'theia/image_compress'
 
 require 'schmooze'
+
+module Theia
+end

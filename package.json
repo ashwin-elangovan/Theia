@@ -1,6 +1,6 @@
 {
   "name": "theia",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Ruby gem to create, compress, compare PNGs or JPEGs using Google Puppeteer/Chromium",
   "repository": {
     "type": "git",
