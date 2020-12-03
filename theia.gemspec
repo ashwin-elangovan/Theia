@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'schmooze', '~> 0.2'
 
-  s.add_development_dependency 'byebug', '~> 9.0.6'
   s.add_development_dependency 'mini_magick', '~> 4.9'
   s.add_development_dependency 'rspec', '~> 3.8'
   s.add_development_dependency 'rubocop', '~> 0.72'
