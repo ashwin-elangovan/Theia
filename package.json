@@ -1,10 +1,10 @@
 {
   "name": "theia",
   "version": "0.0.1",
-  "description": "A Ruby gem to create PNGs or JPEGs using Google Puppeteer/Chromium",
+  "description": "A Ruby gem to create, compress, compare PNGs or JPEGs using Google Puppeteer/Chromium",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ash-elangovan/theia.git"
+    "url": "git+https://github.com/ashelangovan/theia.git"
   },
   "keywords": [
     "puppeteer",
@@ -17,9 +17,9 @@
   "author": "ashelangovan97@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ash-elangovan/theia/issues"
+    "url": "https://github.com/ashelangovan/theia/issues"
   },
-  "homepage": "https://github.com/ash-elangovan/theia#readme",
+  "homepage": "https://github.com/ashelangovan/theia#readme",
   "devDependencies": {
     "pixematch": "^5.1.0",
     "puppeteer": "^1.20.0",

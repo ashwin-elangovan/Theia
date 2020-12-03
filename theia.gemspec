@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.version = Theia::VERSION
   s.authors = ['Ashwin Elangovan']
   s.email       = %w[ashelangovan97@gmail.com]
-  s.homepage    = 'http://github.com/ash-elangovan/theia'
+  s.homepage    = 'http://github.com/ashelangovan/theia'
   s.license     = 'MIT'
   s.date = '2019-09-13'
-  s.summary = 'A Ruby gem to create PNGs or JPEGs using Google Puppeteer/Chromium'
+  s.summary = 'A Ruby gem to create, compress, compare PNGs or JPEGs using Google Puppeteer/Chromium'
   s.require_paths = ['lib']
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^spec/})
