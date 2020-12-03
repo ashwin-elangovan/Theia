@@ -1,4 +1,4 @@
-class Theia
+module Theia
   class Exceptions
     class InvalidFileFormatError < StandardError
       def initialize

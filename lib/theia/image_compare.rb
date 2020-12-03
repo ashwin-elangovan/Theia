@@ -1,7 +1,7 @@
 require 'theia/exceptions'
 require 'theia/utils'
 
-class Theia
+module Theia
   class ImageCompare
     #
     # Processor helper class for calling out to Pixelmatch NodeJS library

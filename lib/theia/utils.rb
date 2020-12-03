@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Theia
+module Theia
   #
   # Utility class for Theia helper methods
   #

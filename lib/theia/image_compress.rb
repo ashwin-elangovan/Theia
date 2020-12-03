@@ -1,7 +1,7 @@
 require 'theia/exceptions'
 require 'theia/utils'
 
-class Theia
+module Theia
   class ImageCompress
     #
     # Processor helper class for calling out to Sharp NodeJS library

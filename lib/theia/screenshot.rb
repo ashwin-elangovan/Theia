@@ -2,7 +2,7 @@ require 'theia/utils'
 require 'schmooze'
 require 'theia/exceptions'
 
-class Theia
+module Theia
   class Screenshot
 
     DEFAULT_DEVICE = 'Kindle Fire HDX'.freeze
