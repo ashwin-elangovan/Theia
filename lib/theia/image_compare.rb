@@ -19,8 +19,9 @@ module Theia
   					const image_1 = PNG.sync.read(fs.readFileSync(new_image));
   					const { width, height } = image_1;
   					const diff = new PNG({ width, height });
-  					pixelmatch(image_1.data, image_2.data, diff.data, width, height, options);
+  					const image_diff = pixelmatch(image_1.data, image_2.data, diff.data, width, height, options);
   					fs.writeFileSync(output_file, PNG.sync.write(diff));
+            return image_diff;
           }
         FUNCTION
       end
@@ -29,7 +30,8 @@ module Theia
 
     def compare(image_1, image_2, output, options = {})
       return raise Exceptions::InvalidFileFormatError if Utils.invalid_file_format?('png', image_1, image_2)
-      image_processor.compare_png(image_1, image_2, output, construct_params(options))
+      return_val = image_processor.compare_png(image_1, image_2, output, construct_params(options))
+      return_val
     end
 
     private
