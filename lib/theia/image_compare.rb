@@ -16,7 +16,7 @@ module Theia
   					const PNG = require('pngjs').PNG;
   					const pixelmatch = require('pixelmatch');
   					const image_1 = PNG.sync.read(fs.readFileSync(old_image));
-  					const image_1 = PNG.sync.read(fs.readFileSync(new_image));
+  					const image_2 = PNG.sync.read(fs.readFileSync(new_image));
   					const { width, height } = image_1;
   					const diff = new PNG({ width, height });
   					const image_diff = pixelmatch(image_1.data, image_2.data, diff.data, width, height, options);
